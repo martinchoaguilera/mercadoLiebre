@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title><%= propiedadesProductos.name %></title>
+     <!-- Font Awesome Stylesheet -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+     <!-- Bootstrap Grid Stylesheet -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <!-- Own Stylesheet -->
+     <script src="https://kit.fontawesome.com/2aa1bb4704.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+     <!-- Estilos propios -->
+     <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-5 col-lg-2"><a href="/"><img src="/images/logo-mercado-liebre.svg" alt=""></a>
+                    </div>
+                    <div class="col-7 col-lg-6">
+                         <div class="input-group mb-3">
+                              <input type="text" class="form-control" placeholder="Buscar productos,marcas y más"
+                                   aria-label="Recipient's username" aria-describedby="basic-addon2">
+                              <div class="input-group-append">
+                                   <button class="btn btn-outline-secondary" type="button"><i
+                                             class="fas fa-search"></i></button>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="d-none d-lg-block d-lg-4">
+                         <p><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjetas de crédito</p>
+                    </div>
+               </div>
+               <div>
+                    <div class="d-lg-none d-flex justify-content-center segParrafo">
+                         <p><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjetas de crédito</p>
+                         </p>
+                    </div>
+               </div>
+               <nav class="navbar  navbar-expand-sm">
+                    <button class="navbar-toggler btn-style" type="button" data-toggle="collapse"
+                         data-target="#navbar-collapse">☰</button>
+                    <div class="collapse navbar-collapse uls-style" id="navbar-collapse">
+                         <ul class="nav navbar-nav ml-auto ul-1">
+                              <li class="nav-item"> <a class="nav-link" href="#">Ofertas</a>
+                              </li>
+                              <li class="nav-item"> <a class="nav-link" href="#">Tiendas Oficiales</a>
+                              </li>
+                              <li class="nav-item"> <a class="nav-link" href="#">Vender</a>
+                              </li>
+                              <li class="nav-item"> <a class="nav-link" href="#">Ayuda</a>
+                              </li>
+                         </ul>
+                         <ul class="nav navbar-nav ml-auto">
+                              <li class="nav-item"> <a class="nav-link" href="#">Creá tu cuenta <i
+                                             class="far fa-address-card"></i> </a>
+                              </li>
+                              <li class="nav-item"> <a class="nav-link" href="#">Ingresá <i
+                                             class="fas fa-sign-in-alt"></i> </a>
+                              </li>
+                              <li class="nav-item"> <a class="nav-link" href="#">Mis compras <i
+                                             class="fas fa-shopping-basket"></i> </a>
+                              </li>
+                         </ul>
+                    </div>
+               </nav>
+          </div>
+
+     </header>
+     <main>
+          <section class="container">
+               <div class="title">
+                    <!-- <%%> -->
+                    <h4>Detalle del producto: <%= propiedadesProductos.name %></h4>
+               </div>
+               <div class="row">
+                    <article class="col-12 row fila">
+                         <div class="col-12 col-lg-8 imagenProducto">
+                              <img src="/images/<%= propiedadesProductos.image %>" alt="">
+                              <div class="col-12 lorem">
+                                   <p><%= propiedadesProductos.description %></p>
+                              </div>
+                         </div>
+                         <div class="col-12 col-lg-4 descriptionProduct">
+                              <h3 class="name-product"><%= propiedadesProductos.name %></h3>
+                              <div class="price">
+
+                                   <p class="priceNo">$<%= propiedadesProductos.price %></p>
+                                   <p class="descuento"> / <%= propiedadesProductos.discount %>% OFF</p>
+                              </div>
+                              <p class="price-real">$<%= propiedadesProductos.price -(propiedadesProductos.price*(propiedadesProductos.discount/100))%></p>
+                              <p class="cards-font"><i class="fas fa-credit-card icons-cuerpo icon-product"></i>Pagá en 12 cuotas sin
+                                   interés.</p>
+                              <p class="cards-font"><i class="fas fa-store icons-cuerpo icon-product"></i>Retiro gratis en locales
+                                   del vendedor</p>
+                              <button type="button" class="btn btn-primary btn-comprar">COMPRAR AHORA</button>
+                         </div>
+                    </article>
+
+               </div>
+          </section>
+     </main>
+     <footer>
+          <section class="container">
+               <div class="row espacios">
+                    <div class="col-12 col-lg-4">
+                         <i class="fas fa-credit-card"></i>
+                         <h4>Pagá con tarjeta o en efectivo</h4>
+                         <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago.
+                              ¡Y
+                              siempre es seguro!</p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                         <i class="fas fa-gift"></i>
+                         <h4>Envío gratis desde $ 1.999</h4>
+                         <p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un
+                              beneficio de Mercado Puntos.</p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                         <i class="fas fa-user-shield"></i>
+                         <h4>Seguridad, de principio a fin</h4>
+                         <p> ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás
+                              siempre protegido.</p>
+                    </div>
+               </div>
+               <p class="derechos">Copyright © 1999-2019 MercadoLiebre S.R.L.</p>
+          </section>
+     </footer>
+
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+          integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+          crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+          integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>
